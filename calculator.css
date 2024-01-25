@@ -1,0 +1,106 @@
+body{
+    background-image: url(/images/bg.JPG);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    top: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height:  50%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 0.3em solid; 
+    margin: 3em 5em 1em 5em;
+}
+
+#answer{
+    position: relative;
+
+}
+
+#answer{
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+
+#calculateBtn{
+    height: 3rem;
+    width: 6rem;
+    position: absolute;
+    bottom: 5rem;
+    background-color: aqua;
+   
+}
+
+#calculateBtn:hover{
+    background-color:aquamarine;
+}
+
+#calculateBtn:active{
+    background-color: rgb(82, 204, 163);
+}
+
+@media  screen and (max-width:780px) {
+    body{
+        background-image: url(/images/mobileBg.jpg) ;
+       
+    }
+    .container{
+        width: fit-content;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    #num1{
+        margin: 1rem 2rem ;
+
+    }
+    #operator{
+       position: relative;
+    }
+    #num2{
+        display: block;
+        margin: 1rem 2rem ;
+    }
+    #answer{
+        position: relative;
+        top: -4rem;
+        margin-left: 0;
+    }
+    #calculateBtn{ 
+        
+    }
+    
+}
+@media screen and (min-width: 800px) {
+    
+
+#num1{
+    height: 2rem;
+    margin-right: 2em;
+}
+#num2{
+    height: 2rem;
+    margin-left: 2em;
+}
+#operator{
+    height: 2rem;
+    width: 3rem;
+    font-size: 100%;
+}
+#calculateBtn{
+    height: 4rem;
+    width: 10rem;
+    font-size: 150%;
+    bottom: 5rem;
+  
+}
+
+}
