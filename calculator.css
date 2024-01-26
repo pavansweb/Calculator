@@ -1,5 +1,5 @@
 body{
-    background-image: url(/images/bg.JPG);
+    background-image: url(/calculator/images/bg.JPG);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -50,7 +50,7 @@ body{
 
 @media  screen and (max-width:780px) {
     body{
-        background-image: url(/images/mobileBg.jpg) ;
+        background-image: url(/calculator/images/mobileBg.jpg) ;
        
     }
     .container{
