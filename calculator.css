@@ -28,7 +28,7 @@ body{
 
 #answer{
     margin-left: 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 #calculateBtn{
@@ -73,10 +73,13 @@ body{
         position: relative;
         top: -4rem;
         margin-left: 0;
+        font-size: 2rem;
+        word-wrap: break-word;
     }
-    #calculateBtn{ 
-        
-    }
+    #calculateBtn{
+        bottom: 2rem;
+    }    
+   
     
 }
 @media screen and (min-width: 800px) {
