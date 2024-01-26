@@ -29,6 +29,7 @@ body{
 #answer{
     margin-left: 1rem;
     font-size: 2rem;
+    word-wrap: break-word;
 }
 
 #calculateBtn{
