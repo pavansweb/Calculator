@@ -12,16 +12,17 @@
   
 
       <div class="container">
-        <input type="number" placeholder="Number 1" id="num1">
+        <input type="number" placeholder="Number 1" id="num1"> 
         <select  id="operator" >
         <option id="+" >+</option>
         <option id="-">-</option>
         <option id="/">/</option>
         <option id="x">x</option>
-        
+        <option id="^">^</option>
+        </select>
             
         <input type="number" placeholder="Number 2" id="num2">
-        <button id="calculateBtn"> Calculate</button>
+        <button id="calculateBtn" onclick="calculate()"> Calculate</button>
         <p id="answer">    = </p>
 
       </div>
