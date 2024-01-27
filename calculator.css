@@ -19,6 +19,8 @@ body{
     background-color: rgba(255, 255, 255, 0.7);
     border: 0.3em solid; 
     margin: 3em 5em 1em 5em;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h1{
     position: absolute;
@@ -30,12 +32,18 @@ h1{
     background-position: center;
     text-decoration: solid;
     -webkit-text-fill-color: transparent;
+    background-clip: text ;
     -webkit-background-clip: text ;
     display: none;
 }
 #answer{
     position: relative;
-
+    background-color: #f39c12;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: white;
 }
 
 #answer{
@@ -50,11 +58,15 @@ h1{
     position: absolute;
     bottom: 5rem;
     background-color: aqua;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
    
 }
 
-#calculateBtn:hover{
-    background-color:aquamarine;
+#calculateBtn:hover {
+    background-color: #2ecc71;
+    color: white;
 }
 
 #calculateBtn:active{
@@ -62,41 +74,201 @@ h1{
 }
 
 
-@media  screen and (max-width:780px) {
-    body{
-        background-image: url(/calculator/images/mobileBg.jpg) ;
-       
-    }
-    
-    .container{
-        width: fit-content;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-    #num1{
-        margin: 1rem 2rem ;
 
-    }
-    #operator{
-       position: relative;
-    }
-    #num2{
-        display: block;
-        margin: 1rem 2rem ;
-    }
-    #answer{
-        position: relative;
-        top: -4rem;
-        margin-left: 0;
-        font-size: 2rem;
-        word-wrap: break-word;
-    }
-    #calculateBtn{
-        bottom: 2rem;
-    }    
-   
+#calculatorButtons{
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+   align-content: center;
+    top: 50%;
     
 }
+
+.grid-item{
+    
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    margin:1px;
+    transition: ease 2s ;
+}
+.container .grid-item:not(#writer):not(#clearBtn):not(#calculateBtn2) {
+    border-radius: 20%;
+}
+
+#writer{
+   text-align: center;
+    padding-top: 1px;
+    grid-column: 1/6;
+    height: 2rem;
+    border: 2.px solid black;
+}
+
+.grid-item :active {
+    transform: scale(0.5);
+}
+
+.number{
+    border-radius: 50%;
+    background-image: linear-gradient(red , white);
+}
+
+#clearBtn{
+    grid-column: 1/4;
+    padding: 9px;
+    background-image: linear-gradient(white , blue);
+}
+#calculateBtn2{
+    grid-column: 4/6;
+    font-size: 0.9rem;
+    padding: 9px;
+    background-image: linear-gradient(white,red);
+}
+
+
+
+#operator:hover,
+#into:hover,
+#divide:hover,
+#plus:hover,
+#minus:hover,
+#exponent:hover,
+#undo:hover,
+#clearBtn:hover {
+    background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+}
+
+#operator:hover,
+#into:hover,
+#divide:hover,
+#plus:hover,
+#minus:hover,
+#exponent:hover,
+#undo:hover,
+#clearBtn:hover {
+    background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+}
+
+#seven:hover,
+#eight:hover,
+#nine:hover,
+#four:hover,
+#five:hover,
+#six:hover,
+#one:hover,
+#two:hover,
+#three:hover,
+#calculateBtn2:hover {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 255, 0.5));
+    transition: background-color 0.3s;
+}
+
+
+
+
+#undo,#exponent,#into,#divide,#plus,#minus {
+    background-image: linear-gradient(blue,white);
+}
+
+
+
+
+
+
+
+#num1,
+#num2,
+#operator {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#num1:focus,
+#num2:focus,
+#operator:focus {
+    border-color: #2ecc71;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 780px) {
+    body {
+        background-image: url(/calculator/images/mobileBg.jpg);
+    }
+
+    .container {
+        width: auto;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        margin: 1em;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #num1 {
+        width: 100%;
+        margin: 1rem 0.5rem;
+    }
+
+    #operator {
+        position: relative;
+        height: 3rem;
+        width: 70%;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    #num2 {
+        width: 100%;
+        display: block;
+        margin: 1rem 0.5rem;
+    }
+
+    #answer {
+        position: relative;
+        top: -2rem;
+        margin-left: 0;
+        width: fit-content;
+        height: fit-content;
+        word-wrap: break-word;
+    }
+
+    #calculateBtn {
+        bottom: 1rem;
+        height: 3.5rem;
+        width: 6.5rem;
+        font-size: 3rem;
+    }
+
+    #calculatorButtons {
+        top: 25em;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #num1,
+    #num2,
+    #operator,
+    #answer,
+    #calculateBtn {
+        font-size: 1rem;
+    }
+
+    #calculatorButtons .grid-item {
+        font-size: 1.2rem;
+    }
+}
+
 @media screen and (min-width: 800px) {
     
     h1{
@@ -120,8 +292,29 @@ h1{
         height: 4rem;
         width: 10rem;
         font-size: 150%;
-        bottom: 5rem;
+        bottom: 2rem;
       
     }
-
+    #calculateBtn2{
+        font-size: 2rem;
+    }
+    #calculatorButtons{
+        border: 5px solid black;
+        height: fit-content;
+        width: fit-content;
+        top: 28rem;
+        padding: 2rem 9rem;
+    }
+    .grid-item{
+        margin: 3px;
+        font-size: 1.8rem;
+        padding: 1.8rem;
+    }
+    #writer{
+        margin-bottom: 3rem;
+    }
+    #answer{
+        position: absolute;
+        top: 52%;
+    }
 }
