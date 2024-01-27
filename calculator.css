@@ -1,5 +1,5 @@
 body{
-    background-image: url(/calculator/images/bg.JPG);
+    background-image: url(https://i.imgur.com/49jkS01.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -27,7 +27,7 @@ h1{
     top: 1px;
     font-family:serif;
     font-size: 3rem;
-    background-image: url(/calculator/images/textBg.JPG);   
+    background-image: url(https://i.imgur.com/TpAldHx.jpg);   
     background-size: cover;
     background-position: center;
     text-decoration: solid;
@@ -202,7 +202,7 @@ h1{
 
 @media screen and (max-width: 780px) {
     body {
-        background-image: url(/calculator/images/mobileBg.jpg);
+        background-image: url(https://i.imgur.com/yz3bMuq.jpg);
     }
 
     .container {
