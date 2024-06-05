@@ -2,36 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator - By Pavan</title>
     <link rel="stylesheet" href="calculator.css">
 </head>
-     
 <body>
-  
-
-      <div class="container">
-        <h1> Calculator By Pavan </h1>
+    <div class="container" id="inputSection">
+        <h1>Calculator By Pavan</h1>
         <input type="number" placeholder="Number 1" id="num1"> 
-        <select  id="operator" >
-          <option value="+">+ (plus)</option>
-          <option value="-">- (minus)</option>
-          <option value="/">&#247;(Divided  by)</option>
-          <option value="x">x (multiplied by)</option>
-          <option value="^">^ (to the power)</option>
-          
+        <select id="operator">
+            <option value="+">+ (plus)</option>
+            <option value="-">- (minus)</option>
+            <option value="/">&#247;(Divided by)</option>
+            <option value="x">x (multiplied by)</option>
+            <option value="^">^ (to the power)</option>
         </select>
-            
         <input type="number" placeholder="Number 2" id="num2">
-        <button id="calculateBtn" onclick="calculate()" > Calculate</button>
-        <p id="answer">    = </p>
+        <button id="calculateBtn" onclick="calculate()">Calculate</button>
+        <p id="answer">=</p>
+    </div>
 
-      </div>
-
-      <div class="container" id="calculatorButtons">
- 
-        <button class="grid-item" id="writer">         </button>
+    <div class="container secondContainer" id="calculatorButtons">
+        <button class="grid-item" id="writer"></button>
         <button class="grid-item number" id="seven" value="7">7</button>
         <button class="grid-item number" id="eight" value="8">8</button>
         <button class="grid-item number" id="nine" value="9">9</button>
@@ -45,15 +37,12 @@
         <button class="grid-item number" id="one" value="1">1</button>
         <button class="grid-item number" id="two" value="2">2</button>
         <button class="grid-item number" id="three" value="3">3</button>
-        <button class="grid-item" id="plus" value="+">&nbsp; +&nbsp; </button>
+        <button class="grid-item" id="plus" value="+">&nbsp; + &nbsp;</button>
         <button class="grid-item" id="minus" value="-">&nbsp; - &nbsp;</button>
-        <button class="grid-item" id="clearBtn" onclick="clear()"> Clear</button>
-        <button class="grid-item" id="calculateBtn2" onclick="updateResult()"> =</button>
-        
-      
-      </div>
+        <button class="grid-item" id="clearBtn" onclick="clearInput()">Clear</button>
+        <button class="grid-item" id="calculateBtn2" onclick="updateResult()">=</button>
+    </div>
 
+    <script src="calculator.js"></script>
 </body>
- <script src="calculator.js"></script>
-
 </html>
